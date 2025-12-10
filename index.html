@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual sua essência ideal?</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="quiz-container">
+
+    <!-- TELA INICIAL -->
+    <img src="dfranca.jpg" width="70">
+    <section class="screen start-screen" id="start-screen">
+      <big><big><h1>Conclua essa analise agora e descubra que tipo de perfume mais combina com você nesse momento</h1></big></big>
+        <p class="intro-text">Todas as fragrâncias aqui são adquiríveis na <a href="https://www.instagram.com/lojadasessenciasmanaus/" class="store-link">Loja das Essências</a> por apenas <b>R$ 35,00</b> cada!</p>
+        
+        <!-- CORREÇÃO: Alterado para chamar iniciarQuiz() -->
+        <button class="btn" onclick="iniciarQuiz()">Começar</button>
+    </section>
+
+    <!-- PERGUNTA 1 -->
+    <section class="screen" id="q1" style="display: none;">
+        <!-- CORREÇÃO: Alterado para usar a imagem dinâmica -->
+        <img id="img-pergunta" src="perguntas.jpg" alt="">
+        <h2>Qual tipo de fragrância você está buscando hoje? <span class="req">*</span></h2>
+        <button class="option" onclick="select('q1','feminino')">Feminino</button>
+        <button class="option" onclick="select('q1','masculino')">Masculino</button>
+        <button class="option" onclick="select('q1','ambos')">Ambos</button>
+
+        <button class="btn next" onclick="nextScreen()">Próxima</button>
+    </section>
+
+    <!-- PERGUNTA 2 -->
+    <section class="screen" id="q2" style="display: none;">
+        <img src="pergunta2.jpg" alt="">
+        <h2>Você prefere algo... <span class="req">*</span></h2>
+        <button class="option" onclick="select('q2','suave')">Suave e leve</button>
+        <button class="option" onclick="select('q2','equilibrado')">Equilibrado e versátil</button>
+        <button class="option" onclick="select('q2','intenso')">Intenso e marcante</button>
+
+        <button class="btn next" onclick="nextScreen()">Próxima</button>
+    </section>
+
+    <!-- PERGUNTA 3 -->
+    <section class="screen" id="q3" style="display: none;">
+        <img src="screenshot_15.jpg" alt="">
+        <h2>Qual cheiro te encanta mais? <span class="req">*</span></h2>
+        <button class="option" onclick="select('q3','algodao')">Roupa limpa, pele limpa, Algodão</button>
+        <button class="option" onclick="select('q3','baunilha')">Baunilha,Rosas frescas, algo mais floral e doce</button>
+        <button class="option" onclick="select('q3','limao')">Limão Siciliano, algo fresco e revigorante</button>
+        <button class="option" onclick="select('q3','jasmin')">Jasmim,Incenso, algo mais chique e quente</button>
+        <button class="option" onclick="select('q3','patchouli')">Rosa seca, Patchouli, cheiro de pessoa limpa e luxuosa</button>
+
+        <button class="btn next" onclick="nextScreen()">Próxima</button>
+    </section>
+
+    <!-- PERGUNTA 4 -->
+    <section class="screen" id="q4" style="display: none;">
+        <img src="screenshot_19.jpg" alt="">
+        <h2>Em sua opinião, qual dessas palavras te define mais? <span class="req">*</span></h2>
+        <!-- CORREÇÃO: Padronizado sem acento para facilitar comparação -->
+        <button class="option" onclick="select('q4','intensidade')">Intensidade</button>
+        <button class="option" onclick="select('q4','docura')">Doçura</button>
+        <button class="option" onclick="select('q4','revigorante')">Revigorante</button>
+        <button class="option" onclick="select('q4','elegancia')">Elegância</button>
+        <button class="option" onclick="select('q4','floralidade')">Floralidade</button>
+        
+        <button class="btn next" onclick="nextScreen()">Próxima</button>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="screen" id="result" style="display: none;">
+        <h2>Seu tipo de perfume é:</h2>
+        <p id="resultText"></p>
+
+        <button class="btn" onclick="restart()">Refazer</button>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
