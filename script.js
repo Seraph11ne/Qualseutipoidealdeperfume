@@ -199,8 +199,8 @@ function getResult() {
 
     // -------- 11. Fougère ----------
     if (
-        (q1 === "masculino" || q1 === "ambos") &&
-        (q2 === "suave" || q2 === "equilibrado") &&
+        q1 === "masculino" &&
+        q2 === "equilibrado" &&
         q3 === "algodao" &&
         q4 === "revigorante"
     ) return `<img src="lavanda.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Fougère<br><br>07 — Biografia<br>16 — Hugo Boss<br>24 — Quasar<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
@@ -262,4 +262,5 @@ function getResult() {
     // Fallback final (nunca deveria chegar aqui, mas por segurança)
     return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
 }
+
 
