@@ -249,7 +249,7 @@ function getResult() {
         if (q2 === "intenso") {
             return `<img src="img/madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Masculino)<br><br>06 — Azzaro Tradicional (intenso)<br>19 — Lapidus (intenso)<br>28 — Invictus (equilibrado)<br>29 — Ambercrombie (intenso)<br>30 — Fahrenheit (intenso)<br>32 — Essencial (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
         } else {
-            return `<img src="img/img/flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Masculino)<br><br>16 — Hugo Boss<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
+            return `<img src="img/flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Masculino)<br><br>16 — Hugo Boss<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
         }
     }
     
@@ -275,3 +275,4 @@ function getResult() {
     // Fallback final (nunca deveria chegar aqui, mas por segurança)
     return `<img src="img/frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
 }
+
