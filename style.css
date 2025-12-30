@@ -1,3 +1,7 @@
+* {
+    font-family: Segoe UI;
+}
+
 .hero {
   display: flex;
   align-items: center; 
@@ -34,7 +38,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: #fff;
     margin: 0;
     padding: 0;
 }
@@ -54,7 +57,20 @@ body {
     display: none;
 }
 
+.alinhar{
+    max-width: 100%;
+    height: auto  ;
+    border: 5px solid rgb(32, 32, 163);
+    border-radius: 10px;
+}
 
+.left{
+    text-align: left;
+    font-size: 15px;
+}
+.blue{
+    color: rgb(32, 32, 163);
+}
 /* Remova a regra .screen.active ou deixe apenas para a tela inicial */
 .start-screen {
     display: block;
@@ -64,7 +80,7 @@ body {
 
 .btn {
     padding: 12px 20px;
-    background: rgb(58, 145, 245);
+    background: rgb(9, 6, 175);
     color: white;
     border: none;
     cursor: pointer;
@@ -72,6 +88,7 @@ body {
 }
 
 .option {
+    background-color: #add8e6;
     display: block;
     width: 100%;
     margin: 10px 0;
@@ -81,8 +98,8 @@ body {
 }
 
 .option.selected {
-    background: #333;
-    color: white;
+    background:#78afc2;
+;    border-color: darkblue;
 }
 
 .store-link {
@@ -110,3 +127,10 @@ body {
 #resultText li {
     margin-bottom: 5px;
 }
+ 
+.fonte-60 {
+    font-size: 45px;
+}
+
+*{background-color: aliceblue;}
+   
