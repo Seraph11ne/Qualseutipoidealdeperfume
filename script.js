@@ -1,4 +1,3 @@
-
 // No início do arquivo JavaScript, após as variáveis:
 document.addEventListener('DOMContentLoaded', function() {
     // Garante que apenas a tela inicial está visível
@@ -10,19 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     document.getElementById("result").style.display = "none";
 });
-
-// E modifique a função iniciarQuiz() para:
-function iniciarQuiz() {
-    // Esconde tela inicial
-    document.getElementById("start-screen").style.display = "none";
-    
-    // Mostra primeira pergunta COM display: block (que sobrescreve o CSS)
-    document.getElementById("q1").style.display = "block";
-    
-    // Mostra primeira imagem
-    mostrarImagemPergunta();
-}
-
 
 // ------------------ VARIÁVEIS ------------------
 let answers = {};
@@ -60,7 +46,7 @@ function iniciarQuiz() {
     // Esconde tela inicial
     document.getElementById("start-screen").style.display = "none";
     
-    // Mostra primeira pergunta
+    // Mostra primeira pergunta COM display: block (que sobrescreve o CSS)
     document.getElementById("q1").style.display = "block";
     
     // Mostra primeira imagem
@@ -109,7 +95,7 @@ function restart() {
 function mostrarImagemPergunta() {
     const imagens = [
         "perguntas.jpg",
-        "pergunta2.jpg",
+        "pergunta2.jpg", 
         "screenshot_15.jpg",
         "screenshot_19.jpg"
     ];
@@ -129,7 +115,7 @@ function getResult() {
     const q4 = norm(answers.q4);
 
     const femOuAmbos = (q1 === "feminino" || q1 === "ambos");
-    const masc = (q1 === "masculino"|| q1 === "ambos");
+    const masc = (q1 === "masculino" || q1 === "ambos");
 
     // -------- 1. Florais (Feminino) ----------
     if (
@@ -137,7 +123,7 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado") &&
         (q3 === "algodao" || q3 === "baunilha") &&
         (q4 === "docura" || q4 === "floralidade")
-    ) return `<img src="/flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Feminino)<br><br>01 — La Vie Est Belle (intenso)<br> 02 — Amor Amor (equilibrado)<br> 03 — 212 VIP Rosé (intenso)<br>09 — Miss Dior (equilibrado)<br>15 — Gabriela Sabatine (intenso)<br> 17 — J'adore (equilibrado)<br>23 — Lily (suave)<br><br> <strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Feminino)<br><br>01 — La Vie Est Belle (intenso)<br> 02 — Amor Amor (equilibrado)<br> 03 — 212 VIP Rosé (intenso)<br>09 — Miss Dior (equilibrado)<br>15 — Gabriela Sabatine (intenso)<br> 17 — J'adore (equilibrado)<br>23 — Lily (suave)<br><br> <strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 2. Florais (Masculino) ----------
     if (
@@ -145,7 +131,7 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado" || q2 === "intenso") &&
         (q3 === "algodao" || q3 === "baunilha") &&
         (q4 === "docura" || q4 === "floralidade")
-    ) return `<img src="img/flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Masculino)<br><br>16 — Hugo Boss<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Masculino)<br><br>16 — Hugo Boss<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 3. Cítricos (Feminino) ----------
     if (
@@ -153,7 +139,7 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado") &&
         (q3 === "algodao" || q3 === "limao") &&
         q4 === "revigorante"
-    ) return `<img src="img/lemon.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Cítricos (Feminino)<br><br>12 — 212 VIP Rosé<br>02 — Amor Amor<br>35 — Chance<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="lemon.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Cítricos (Feminino)<br><br>12 — 212 VIP Rosé<br>02 — Amor Amor<br>35 — Chance<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 4. Cítricos (Masculino) ----------
     if (
@@ -161,7 +147,7 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado") &&
         (q3 === "algodao" || q3 === "limao") &&
         q4 === "revigorante"
-    ) return `<img src="img/lemon.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Cítricos (Masculino)<br><br>21 — Polo Sport<br>24 — Quasar<br>28 — Invictus<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="lemon.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Cítricos (Masculino)<br><br>21 — Polo Sport<br>24 — Quasar<br>28 — Invictus<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 5. Chipre (Feminino) ----------
     if (
@@ -169,7 +155,7 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado" || q2 === "intenso") &&
         q3 === "patchouli" &&
         (q4 === "elegancia" || q4 === "intensidade")
-    ) return `<img src="img/canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Feminino)<br><br>08 — Chanel Nº5<br>22 — Coco Mademoiselle<br>35 — Chance<br>09 — Miss Dior<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Feminino)<br><br>08 — Chanel Nº5<br>22 — Coco Mademoiselle<br>35 — Chance<br>09 — Miss Dior<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 6. Chipre (Masculino) ----------
     if (
@@ -177,7 +163,7 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado" || q2 === "intenso") &&
         q3 === "patchouli" &&
         (q4 === "elegancia" || q4 === "intensidade")
-    ) return `<img src="img/canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Masculino)<br><br>33 — Explorer (Mont Blanc)<br>32 — Essencial<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Masculino)<br><br>33 — Explorer (Mont Blanc)<br>32 — Essencial<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 7. Âmbar (Feminino) ----------
     if (
@@ -185,7 +171,7 @@ function getResult() {
         q2 === "intenso" &&
         q3 === "jasmin" &&
         (q4 === "intensidade" || q4 === "elegancia")
-    ) return `<img src="img/ylang.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Âmbar (Feminino)<br><br>01 — La Vie Est Belle<br>04 — Angel<br>08 — Chanel Nº5<br>17 — J'adore<br>27 — Hypnose<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="ylang.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Âmbar (Feminino)<br><br>01 — La Vie Est Belle<br>04 — Angel<br>08 — Chanel Nº5<br>17 — J'adore<br>27 — Hypnose<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 8. Âmbar (Masculino) ----------
     if (
@@ -193,7 +179,7 @@ function getResult() {
         q2 === "intenso" &&
         q3 === "jasmin" &&
         (q4 === "intensidade" || q4 === "elegancia")
-    ) return `<img src="img/ylang.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Âmbar (Masculino)<br><br>30 — Fahrenheit<br>34 — Malbec Absolut<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="ylang.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Âmbar (Masculino)<br><br>30 — Fahrenheit<br>34 — Malbec Absolut<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 9. Oriental (Feminino) ----------
     if (
@@ -201,7 +187,7 @@ function getResult() {
         q2 === "intenso" &&
         q3 === "limao" &&
         q4 === "elegancia"
-    ) return `<img src="img/oriental.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Oriental (Feminino)<br><br>04 — Angel<br>26 — Lady Million<br>01 — La Vie Est Belle<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="oriental.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Oriental (Feminino)<br><br>04 — Angel<br>26 — Lady Million<br>01 — La Vie Est Belle<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 10. Oriental (Masculino) ----------
     if (
@@ -209,7 +195,7 @@ function getResult() {
         q2 === "intenso" &&
         q3 === "limao" &&
         q4 === "elegancia"
-    ) return `<img src="img/oriental.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Oriental (Masculino)<br><br>06 — Azzaro Tradicional (intenso)<br>18 — Kouros (intenso)<br>19 — Lapidus (intenso)<br>14 — Ferrari Black (equilibrado)<br>29 — Ambercrombie (intenso)<br>34 — Malbec Absolut (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="oriental.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Oriental (Masculino)<br><br>06 — Azzaro Tradicional (intenso)<br>18 — Kouros (intenso)<br>19 — Lapidus (intenso)<br>14 — Ferrari Black (equilibrado)<br>29 — Ambercrombie (intenso)<br>34 — Malbec Absolut (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 11. Fougère ----------
     if (
@@ -217,7 +203,7 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado") &&
         q3 === "algodao" &&
         q4 === "revigorante"
-    ) return `<img src="img/lavanda.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Fougère<br><br>07 — Biografia<br>16 — Hugo Boss<br>24 — Quasar<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="lavanda.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Fougère<br><br>07 — Biografia<br>16 — Hugo Boss<br>24 — Quasar<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 12. Amadeirado (Masculino) ----------
     if (
@@ -225,7 +211,7 @@ function getResult() {
         q2 === "intenso" &&
         q3 === "patchouli" &&
         (q4 === "intensidade" || q4 === "elegancia")
-    ) return `<img src="img/madeira.jpg" style="width:400px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado <br><br>06 — Azzaro Tradicional (intenso)<br>19 — Lapidus (intenso)<br>28 — Invictus (equilibrado)<br>29 — Ambercrombie (intenso)<br>30 — Fahrenheit (intenso)<br>32 — Essencial (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="madeira.jpg" style="width:400px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado <br><br>06 — Azzaro Tradicional (intenso)<br>19 — Lapidus (intenso)<br>28 — Invictus (equilibrado)<br>29 — Ambercrombie (intenso)<br>30 — Fahrenheit (intenso)<br>32 — Essencial (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 13. Amadeirado (Feminino) ----------
     if (
@@ -233,7 +219,7 @@ function getResult() {
         q2 === "intenso" &&
         q3 === "patchouli" &&
         (q4 === "intensidade" || q4 === "elegancia")
-    ) return `<img src="img/madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Feminino)<br><br>22 — Coco Mademoiselle<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Feminino)<br><br>22 — Coco Mademoiselle<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 14. Frutado ----------
     if (
@@ -241,16 +227,16 @@ function getResult() {
         (q2 === "suave" || q2 === "equilibrado") &&
         (q3 === "baunilha" || q3 === "limao") &&
         (q4 === "docura" || q4 === "revigorante")
-    ) return `<img src="img/frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
+    ) return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
     
     // ========== FALLBACKS (SEMPRE RETORNA ALGO) ==========
     
     // Fallback 1: Baseado no gênero e intensidade
     if (masc) {
         if (q2 === "intenso") {
-            return `<img src="img/madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Masculino)<br><br>06 — Azzaro Tradicional (intenso)<br>19 — Lapidus (intenso)<br>28 — Invictus (equilibrado)<br>29 — Ambercrombie (intenso)<br>30 — Fahrenheit (intenso)<br>32 — Essencial (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
+            return `<img src="madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Masculino)<br><br>06 — Azzaro Tradicional (intenso)<br>19 — Lapidus (intenso)<br>28 — Invictus (equilibrado)<br>29 — Ambercrombie (intenso)<br>30 — Fahrenheit (intenso)<br>32 — Essencial (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
         } else {
-            return `<img src="img/img/flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Masculino)<br><br>16 — Hugo Boss<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
+            return `<img src="flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Masculino)<br><br>16 — Hugo Boss<br>25 — 212 Men<br><br><strong>Cada um por R$ 35,00</strong>`;
         }
     }
     
@@ -258,22 +244,21 @@ function getResult() {
     if (femOuAmbos) {
         if (q2 === "intenso") {
             if (q3 === "jasmin" || q4 === "elegancia" || q4 === "intensidade") {
-                return `<img src="img/ylang.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Âmbar (Feminino)<br><br>01 — La Vie Est Belle<br>04 — Angel<br>08 — Chanel Nº5<br>17 — J'adore<br>27 — Hypnose<br><br><strong>Cada um por R$ 35,00</strong>`;
+                return `<img src="ylang.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Âmbar (Feminino)<br><br>01 — La Vie Est Belle<br>04 — Angel<br>08 — Chanel Nº5<br>17 — J'adore<br>27 — Hypnose<br><br><strong>Cada um por R$ 35,00</strong>`;
             } else {
-                return `<img src="img/madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Feminino)<br><br>22 — Coco Mademoiselle<br><br><strong>Cada um por R$ 35,00</strong>`;
+                return `<img src="madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Feminino)<br><br>22 — Coco Mademoiselle<br><br><strong>Cada um por R$ 35,00</strong>`;
             }
         } else {
             if (q3 === "limao" || q4 === "revigorante") {
                 return `<img src="lemon.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Cítricos (Feminino)<br><br>12 — 212 VIP Rosé<br>02 — Amor Amor<br>35 — Chance<br><br><strong>Cada um por R$ 35,00</strong>`;
             } else if (q3 === "patchouli" || q4 === "elegancia" || q4 === "intensidade") {
-                return `<img src="img/canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Feminino)<br><br>08 — Chanel Nº5<br>22 — Coco Mademoiselle<br>35 — Chance<br>09 — Miss Dior<br><br><strong>Cada um por R$ 35,00</strong>`;
+                return `<img src="canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Feminino)<br><br>08 — Chanel Nº5<br>22 — Coco Mademoiselle<br>35 — Chance<br>09 — Miss Dior<br><br><strong>Cada um por R$ 35,00</strong>`;
             } else {
-                return `<img src="img/flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Feminino)<br><br>01 — La Vie Est Belle (intenso)<br>02 — Amor Amor (equilibrado)<br>03 — 212 VIP Rosé (intenso)<br>09 — Miss Dior (equilibrado)<br>15 — Gabriela Sabatine (intenso)<br>17 — J'adore (equilibrado)<br>23 — Lily (suave)<br><br><strong>Cada um por R$ 35,00</strong>`;
+                return `<img src="flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Feminino)<br><br>01 — La Vie Est Belle (intenso)<br>02 — Amor Amor (equilibrado)<br>03 — 212 VIP Rosé (intenso)<br>09 — Miss Dior (equilibrado)<br>15 — Gabriela Sabatine (intenso)<br>17 — J'adore (equilibrado)<br>23 — Lily (suave)<br><br><strong>Cada um por R$ 35,00</strong>`;
             }
         }
     }
     
     // Fallback final (nunca deveria chegar aqui, mas por segurança)
-    return `<img src="img/frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
+    return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
 }
-
