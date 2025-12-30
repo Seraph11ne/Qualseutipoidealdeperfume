@@ -154,7 +154,7 @@ function getResult() {
         femOuAmbos &&
         (q2 === "suave" || q2 === "equilibrado" || q2 === "intenso") &&
         q3 === "patchouli" &&
-        (q4 === "elegancia" || q4 === "intensidade")
+        q4 === "elegancia" 
     ) return `<img src="canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Feminino)<br><br>08 — Chanel Nº5<br>22 — Coco Mademoiselle<br>35 — Chance<br>09 — Miss Dior<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 6. Chipre (Masculino) ----------
@@ -162,7 +162,7 @@ function getResult() {
         masc &&
         (q2 === "suave" || q2 === "equilibrado" || q2 === "intenso") &&
         q3 === "patchouli" &&
-        (q4 === "elegancia" || q4 === "intensidade")
+        q4 === "elegancia"
     ) return `<img src="canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Masculino)<br><br>33 — Explorer (Mont Blanc)<br>32 — Essencial<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 7. Âmbar (Feminino) ----------
@@ -210,7 +210,7 @@ function getResult() {
         masc &&
         q2 === "intenso" &&
         q3 === "patchouli" &&
-        (q4 === "intensidade" || q4 === "elegancia")
+        q4 === "intensidade"
     ) return `<img src="madeira.jpg" style="width:400px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado <br><br>06 — Azzaro Tradicional (intenso)<br>19 — Lapidus (intenso)<br>28 — Invictus (equilibrado)<br>29 — Ambercrombie (intenso)<br>30 — Fahrenheit (intenso)<br>32 — Essencial (intenso)<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 13. Amadeirado (Feminino) ----------
@@ -218,15 +218,15 @@ function getResult() {
         femOuAmbos &&
         q2 === "intenso" &&
         q3 === "patchouli" &&
-        (q4 === "intensidade" || q4 === "elegancia")
+        q4 === "intensidade" 
     ) return `<img src="madeira.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Amadeirado (Feminino)<br><br>22 — Coco Mademoiselle<br><br><strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 14. Frutado ----------
     if (
         femOuAmbos &&
         (q2 === "suave" || q2 === "equilibrado") &&
-        (q3 === "baunilha" || q3 === "limao") &&
-        (q4 === "docura" || q4 === "revigorante")
+        q3 === "baunilha" &&
+        q4 === "docura" 
     ) return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
     
     // ========== FALLBACKS (SEMPRE RETORNA ALGO) ==========
@@ -262,5 +262,6 @@ function getResult() {
     // Fallback final (nunca deveria chegar aqui, mas por segurança)
     return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
 }
+
 
 
