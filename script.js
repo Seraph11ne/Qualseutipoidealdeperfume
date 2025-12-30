@@ -152,7 +152,7 @@ function getResult() {
     // -------- 5. Chipre (Feminino) ----------
     if (
         femOuAmbos &&
-        (q2 === "suave" || q2 === "equilibrado" || q2 === "intenso") &&
+        (q2 === "suave" || q2 === "equilibrado") &&
         q3 === "patchouli" &&
         q4 === "elegancia" 
     ) return `<img src="canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Feminino)<br><br>08 — Chanel Nº5<br>22 — Coco Mademoiselle<br>35 — Chance<br>09 — Miss Dior<br><br><strong>Cada um por R$ 35,00</strong>`;
@@ -160,7 +160,7 @@ function getResult() {
     // -------- 6. Chipre (Masculino) ----------
     if (
         masc &&
-        (q2 === "suave" || q2 === "equilibrado" || q2 === "intenso") &&
+        (q2 === "suave" || q2 === "equilibrado") &&
         q3 === "patchouli" &&
         q4 === "elegancia"
     ) return `<img src="canela.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Chipre (Masculino)<br><br>33 — Explorer (Mont Blanc)<br>32 — Essencial<br><br><strong>Cada um por R$ 35,00</strong>`;
@@ -262,6 +262,7 @@ function getResult() {
     // Fallback final (nunca deveria chegar aqui, mas por segurança)
     return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
 }
+
 
 
 
