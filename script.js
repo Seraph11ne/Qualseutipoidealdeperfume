@@ -121,8 +121,8 @@ function getResult() {
     if (
         femOuAmbos &&
         (q2 === "suave" || q2 === "equilibrado") &&
-        (q3 === "algodao" || q3 === "baunilha") &&
-        (q4 === "docura" || q4 === "floralidade")
+        q3 === "algodao"  &&
+        q4 === "floralidade"
     ) return `<img src="flower.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Florais (Feminino)<br><br>01 — La Vie Est Belle (intenso)<br> 02 — Amor Amor (equilibrado)<br> 03 — 212 VIP Rosé (intenso)<br>09 — Miss Dior (equilibrado)<br>15 — Gabriela Sabatine (intenso)<br> 17 — J'adore (equilibrado)<br>23 — Lily (suave)<br><br> <strong>Cada um por R$ 35,00</strong>`;
 
     // -------- 2. Florais (Masculino) ----------
@@ -262,6 +262,7 @@ function getResult() {
     // Fallback final (nunca deveria chegar aqui, mas por segurança)
     return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
 }
+
 
 
 
