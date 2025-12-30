@@ -137,7 +137,7 @@ function getResult() {
     if (
         femOuAmbos &&
         (q2 === "suave" || q2 === "equilibrado") &&
-        (q3 === "algodao" || q3 === "limao") &&
+        q3 === "limao" &&
         q4 === "revigorante"
     ) return `<img src="lemon.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Cítricos (Feminino)<br><br>12 — 212 VIP Rosé<br>02 — Amor Amor<br>35 — Chance<br><br><strong>Cada um por R$ 35,00</strong>`;
 
@@ -145,7 +145,7 @@ function getResult() {
     if (
         masc &&
         (q2 === "suave" || q2 === "equilibrado") &&
-        (q3 === "algodao" || q3 === "limao") &&
+        q3 === "limao" &&
         q4 === "revigorante"
     ) return `<img src="lemon.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Cítricos (Masculino)<br><br>21 — Polo Sport<br>24 — Quasar<br>28 — Invictus<br><br><strong>Cada um por R$ 35,00</strong>`;
 
@@ -262,3 +262,4 @@ function getResult() {
     // Fallback final (nunca deveria chegar aqui, mas por segurança)
     return `<img src="frutas.jpg" style="width:200px;height:200px;object-fit:cover;border-radius:10px;margin:10px;"><br>Frutado<br><br>02 — Amor Amor<br>03 — 212 VIP Rosé<br>20 — Cherry<br><br><strong>Cada um por R$ 35,00</strong>`;
 }
+
